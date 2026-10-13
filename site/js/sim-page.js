@@ -18,7 +18,7 @@ function fail(msg) {
 if (!sim) {
   fail('That simulation does not exist.');
 } else {
-  document.title = `${sim.title} · Stats Sims`;
+  document.title = `${sim.title} · Math and Stats Visualization`;
   $('sim-heading').textContent = sim.title;
   $('sim-summary').textContent = sim.summary;
   $('sim-badge').textContent = placements(sim).map((p) => `${p.course.title} · ${p.unit.title}`).join('  |  ');

@@ -1,4 +1,4 @@
-# stats-visualizations
+# Math and Stats Visualization
 
 Interactive simulations for tutoring **counting, probability and introductory
 statistics**, plus some Mathematics 20-1 topics: Alberta Mathematics 20-1 (quadratics), Mathematics 30-1 (permutations, combinations and the
@@ -14,7 +14,7 @@ random draws is labelled as simulated and can be reproduced from its seed.
 | Mathematics 30-2 | Probability | Odds and probability; "or" on a Venn diagram; "and" on a tree diagram; plus the three counting sims |
 | STAT 151 | Sampling distributions and the central limit theorem | Why divide by n − 1? Bessel's correction |
 
-**Live site:** https://peterfriedrich.github.io/stats-visualizations/
+**Live site:** https://peterfriedrich.github.io/math-stats-visualizations/
 
 More are planned for every topic — see `docs/SPEC_phase1.md` and `TODO.md`.
 Every page has a "Key equations" list and "Try this" predict-and-check prompts.
