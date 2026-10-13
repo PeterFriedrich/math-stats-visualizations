@@ -17,7 +17,6 @@ symptom before acting on it.
 - [ ] **Say which STAT 151 formula sheet and z, t and χ² tables the section uses** (SPEC_phase1.md §6 question 2). Blocks every STAT 151 sim that prints a table value.
 - [ ] **Confirm the Mathematics 20-1 textbook** (assumed *Pre-Calculus 11*) so DATA_SHEET.md §4 can be checked against it.
 - [ ] **Name the Mathematics 20-1 topics to add** after quadratics.
-- [ ] **Choose a new site name**, then rename the repo, the Pages URL, the local folder and session, and ask `server` to update `/home/opc/CLAUDE.md`. Check whether the old Pages URL keeps working.
 - [ ] **Keep or drop the GPLv3 `LICENSE`**, copied from chemistry_sim; this repo had none.
 
 ### Before tutoring with it
@@ -36,6 +35,10 @@ symptom before acting on it.
 - [ ] `bessel`: show the current sample's points with x̄ and μ marked, so the student sees why deviations from x̄ are smaller than deviations from μ. Propose first.
 
 ## Done
+
+Closed items moved out of `## Open work` live in **`docs/TODO_archive.md`** — one line each below, reasoning there.
+
+- [x] **Choose a new site name** — DONE 2026-10-13 · `docs/TODO_archive.md`
 
 - `server` session updated this repo's row in `/home/opc/CLAUDE.md` and the owner's project-list doc — 2026-10-01.
 - Rewrite merged (PR #1) and the site is live on GitHub Pages — 2026-10-01.
