@@ -47,6 +47,14 @@ export const sims = [
     concepts: ['vertex form y = a(x − p)² + q', 'area model', 'vertex and axis of symmetry', 'x-intercepts'],
   },
   {
+    id: 'linear-product',
+    course: 'm20-1',
+    unit: 'quadratics',
+    title: 'Applied Quadratics: Multiply Two Linear Expressions',
+    summary: 'Word problems where two quantities each change in a straight line and the answer is their product: price × tickets sold, width × length. Write the two linear expressions, multiply them out to a quadratic, then read the zeros, the vertex and the domain back into the problem.',
+    concepts: ['revenue and area problems', 'expanding two binomials', 'zeros from the factors', 'maximum at the vertex', 'domain'],
+  },
+  {
     id: 'odds',
     course: 'm30-2',
     unit: 'probability',

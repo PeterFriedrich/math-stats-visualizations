@@ -161,3 +161,15 @@ could mislead.
   corner that is taken twice, so h² is added back. Steps after the current one
   stay hidden, and the vertex readouts and graph marks appear only at the last
   step, so a student can work ahead on paper.
+- **Applied quadratics** (`maths/quadratic.js` `linearProduct`,
+  `sims/linear-product.js`): three fixed problem types, each a product of two
+  lines with non-zero slopes. The rectangle's sides are the two factors, scaled
+  to the largest value each reaches on the x slider; revenue uses a separate
+  scale for each side (dollars against tickets), the two area problems one
+  scale. The vertex is found as the midpoint of the zeros, not by completing
+  the square. The domain is where both factors are non-negative; the path
+  problem opens up, so its domain is x ≥ 0 and its question is answered by
+  solving for a given path area instead of reading the vertex. x may be any
+  value on the slider, including ones outside the domain, which the picture
+  refuses with the reason. The zeros, vertex and domain appear only at the
+  last step.
