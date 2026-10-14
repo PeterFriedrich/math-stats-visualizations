@@ -105,3 +105,11 @@ not transcribed from a page (`TODO.md`).
   (half the x-coefficient)² inside the brackets, move the subtracted term out
   multiplied by a, and write the perfect square. Fractions stay exact
   (5/2, not 2.5).
+- Factored form: y = a(x − r)(x − s). The zeros are r and s, one from each
+  factor, and the vertex is halfway between them, at x = (r + s) ÷ 2.
+- Applied problems (revenue, area) write the two factors constant first, as
+  the words give them: (12 + 0.5x)(400 − 10x). Money and measurements are
+  decimals there ($0.50, 12.5 m); a value that does not terminate keeps its
+  fraction and is marked ≈ when rounded.
+- A quadratic equation that does not factor is solved with the quadratic
+  formula, x = (−b ± √(b² − 4ac)) ÷ 2a.

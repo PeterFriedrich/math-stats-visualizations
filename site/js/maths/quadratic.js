@@ -64,3 +64,30 @@ export function xIntercepts(a, b, c) {
 export function evaluate(a, b, c, x) {
   return a * x * x + b * x + c;
 }
+
+// A line m·x + b is the pair [m, b] of rationals; x is a rational too.
+export function linearAt([m, b], x) {
+  return add(mul(m, x), b);
+}
+
+export function productAt(f, g, x) {
+  return mul(linearAt(f, x), linearAt(g, x));
+}
+
+// (m₁x + b₁)(m₂x + b₂) multiplied out one product at a time, for the word
+// problems where two quantities each change linearly (price × number sold,
+// width × length). Both slopes must be non-zero. Each factor gives one zero,
+// the vertex is halfway between them, and `at` holds the two factors' values
+// there, so q = at[0] × at[1] is the product a student writes down.
+export function linearProduct(f, g) {
+  const [m1, b1] = f;
+  const [m2, b2] = g;
+  const first = mul(m1, m2);
+  const outer = mul(m1, b2);
+  const inner = mul(b1, m2);
+  const last = mul(b1, b2);
+  const zeros = [neg(div(b1, m1)), neg(div(b2, m2))];
+  const p = div(add(zeros[0], zeros[1]), rat(2));
+  const at = [linearAt(f, p), linearAt(g, p)];
+  return { first, outer, inner, last, a: first, b: add(outer, inner), c: last, zeros, p, at, q: mul(at[0], at[1]) };
+}

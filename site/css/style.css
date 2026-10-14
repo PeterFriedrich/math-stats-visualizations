@@ -214,6 +214,9 @@ select, input[type="text"] {
 .step-why { color: var(--c-muted); font-size: 14px; max-width: 70ch; }
 .step-why .math { color: var(--c-ink); font-size: 1.1em; }
 .read-off { margin: 4px 0 0; padding-left: 18px; }
+.grid2 { border-collapse: collapse; margin: 4px 0 8px; font-size: .92em; }
+.grid2 th, .grid2 td { border: 1px solid var(--c-border); padding: 3px 12px; text-align: center; }
+.grid2 th { color: var(--c-muted); font-weight: 500; }
 .fr { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; font-size: .8em; line-height: 1.15; margin: 0 .12em; }
 .fr > span:first-child { border-bottom: 1px solid currentColor; padding: 0 .15em; }
 .step-math sup, .math sup, .eq sup { font-size: .65em; line-height: 0; }

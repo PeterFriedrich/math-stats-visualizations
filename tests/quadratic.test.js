@@ -61,3 +61,50 @@ test('test_quadratic_simplify_sqrt', () => {
   assert.deepEqual(Q.simplifySqrt(49), [7, 1]);
   assert.deepEqual(Q.rat(6, -4), [-3, 2]);
 });
+
+test('test_quadratic_linear_product_worked_examples', () => {
+  // Revenue: (12 + 0.5x)(400 − 10x) = −5x² + 80x + 4800, checked by hand.
+  // Zeros −24 and 40, so the vertex is at x = 8: $16 × 320 tickets = $5120.
+  let L = Q.linearProduct([r(1, 2), r(12)], [r(-10), r(400)]);
+  assert.deepEqual([L.first, L.outer, L.inner, L.last], [r(-5), r(200), r(-120), r(4800)]);
+  assert.deepEqual([L.a, L.b, L.c], [r(-5), r(80), r(4800)]);
+  assert.deepEqual(L.zeros, [r(-24), r(40)]);
+  assert.deepEqual([L.p, L.at, L.q], [r(8), [r(16), r(320)], r(5120)]);
+
+  // Fence on three sides: x(60 − 2x) = −2x² + 60x. Greatest area 15 × 30 = 450.
+  L = Q.linearProduct([r(1), r(0)], [r(-2), r(60)]);
+  assert.deepEqual([L.a, L.b, L.c], [r(-2), r(60), r(0)]);
+  assert.deepEqual(L.zeros, [r(0), r(30)]);
+  assert.deepEqual([L.p, L.at, L.q], [r(15), [r(15), r(30)], r(450)]);
+
+  // Path around a garden: (20 + 2x)(30 + 2x) = 4x² + 100x + 600.
+  // Zeros −10 and −15; the minimum is (−5)(5) = −25 at x = −25/2.
+  L = Q.linearProduct([r(2), r(20)], [r(2), r(30)]);
+  assert.deepEqual([L.a, L.b, L.c], [r(4), r(100), r(600)]);
+  assert.deepEqual(L.zeros, [r(-10), r(-15)]);
+  assert.deepEqual([L.p, L.q], [r(-25, 2), r(-25)]);
+
+  // A vertex that is not a whole number: (10 + x)(200 − 15x), zeros −10 and 40/3.
+  L = Q.linearProduct([r(1), r(10)], [r(-15), r(200)]);
+  assert.deepEqual([L.zeros[1], L.p, L.at, L.q], [r(40, 3), r(5, 3), [r(35, 3), r(175)], r(6125, 3)]);
+});
+
+test('test_quadratic_linear_product_agrees_with_standard_form', () => {
+  const v = ([n, d]) => n / d;
+  for (const [f, g] of [
+    [[r(1, 2), r(12)], [r(-10), r(400)]],
+    [[r(3), r(-7)], [r(-2), r(9)]],
+    [[r(2), r(20)], [r(2), r(30)]],
+  ]) {
+    const L = Q.linearProduct(f, g);
+    for (const x of [r(-3), r(0), r(5, 2), L.p]) {
+      const y = v(L.a) * v(x) ** 2 + v(L.b) * v(x) + v(L.c);
+      assert.ok(Math.abs(v(Q.productAt(f, g, x)) - y) < 1e-9);
+    }
+    assert.deepEqual(Q.productAt(f, g, L.p), L.q);
+    for (const z of L.zeros) assert.deepEqual(Q.productAt(f, g, z), r(0));
+  }
+  // The path problem: (20 + 2x)(30 + 2x) − 600 = 464 → 4x² + 100x − 464 = 0 → x = 4 (or −29).
+  assert.deepEqual(Q.xIntercepts(4, 100, -464).exact, [r(-29), r(4)]);
+  assert.deepEqual(Q.linearAt([r(2), r(20)], r(4)), r(28));
+});

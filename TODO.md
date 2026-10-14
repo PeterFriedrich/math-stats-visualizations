@@ -21,7 +21,7 @@ symptom before acting on it.
 
 ### Before tutoring with it
 
-- [ ] **Owner walkthrough of every sim against hand calculations.** SPEC_phase1.md §5 criterion 6. Done when each sim has a ✓ (or a bug filed) here. `bessel`: ☐ `counting`: ☐ `permutations`: ☐ `combinations`: ☐ `binomial`: ☐ `odds`: ☐ `venn`: ☐ `tree`: ☐ `complete-square`: ☐
+- [ ] **Owner walkthrough of every sim against hand calculations.** SPEC_phase1.md §5 criterion 6. Done when each sim has a ✓ (or a bug filed) here. `bessel`: ☐ `counting`: ☐ `permutations`: ☐ `combinations`: ☐ `binomial`: ☐ `odds`: ☐ `venn`: ☐ `tree`: ☐ `complete-square`: ☐ `linear-product`: ☐
 - [ ] **Map sims to program-of-studies outcomes.** Topics are matched by title only; check specific outcome codes against the Alberta programs of study before showing them on a page.
 - [ ] **Check DATA_SHEET.md against the rendered bulletin pages.** It was transcribed from the PDF text layer, which scrambles stacked fractions and drops the conditional bar in P(B | A).
 

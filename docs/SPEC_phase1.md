@@ -8,7 +8,8 @@ to be built and adjusted later (2026-10-01, DECISIONS.md). The seven
 mathematics sims are first versions awaiting the owner's walkthrough. The
 STAT 151 rows other than `bessel` wait for the owner's approval or edits.
 On 2026-10-09 the owner widened the scope to Mathematics 20-1 topics they
-teach, added one at a time; `complete-square` is the first (DECISIONS.md).
+teach, added one at a time; `complete-square` is the first and
+`linear-product` (2026-10-13) the second (DECISIONS.md).
 
 ## 1. Goal
 
@@ -38,6 +39,7 @@ table."
 | Course | Topic | Simulation (catalog id) | Formula-sheet lines it uses |
 |---|---|---|---|
 | Mathematics 20-1 | Quadratic Functions and Equations | Completing the square: worked steps from y = ax² + bx + c to y = a(x − p)² + q beside an area model and the graph (`complete-square`, **built 2026-10-09**) | none (20-1 has no formula sheet; notation in DATA_SHEET.md §4) |
+| Mathematics 20-1 | Quadratic Functions and Equations | Applied quadratics: a word problem gives two linear expressions (price × tickets sold, width × length), which are multiplied out and then interpreted through the zeros, the vertex and the domain (`linear-product`, **built 2026-10-13**; revenue, a pen against a wall, a path around a garden) | none (notation in DATA_SHEET.md §4) |
 | Mathematics 30-1 | Permutations, Combinations, and Binomial Theorem | Fundamental counting principle: fill slots one at a time, independent choices on a tree (`counting`, **built 2026-10-01**) | none (the principle is not on the sheet) |
 | Mathematics 30-1 | Permutations, Combinations, and Binomial Theorem | Permutations: <sub>n</sub>P<sub>r</sub>, repeated elements, (`permutations`, **built 2026-10-01**; objects kept together or apart are not yet covered) | n!, <sub>n</sub>P<sub>r</sub> |
 | Mathematics 30-1 | Permutations, Combinations, and Binomial Theorem | Combinations: <sub>n</sub>C<sub>r</sub>, committees, "at least" and "at most" by cases (`combinations`, **built 2026-10-01**) | <sub>n</sub>C<sub>r</sub> |
